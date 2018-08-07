@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title></head>
+<body>
+<form class="shipping-form" action="" method="post">
+    <div class="row">
+        <div class="col-12"><h2>Fill in the form</h2><br></div>
+    </div>
+    <div class="form__col">
+        <div class="form__twoRow"><label>Name <input type="text" name="name" id="name"></label> <label>Surname <input
+                type="text" name="surname" id="surname"></label></div>
+        <div class="form__row"><label>Company Name <input type="text" name="companyname" id="companyname"></label></div>
+        <div class="form__row"><label>Email <input type="email" name="email" id="email"></label></div>
+        <div class="form__row"><label>Phone number <input type="tel" name="phone" id="phone"></label></div>
+    </div>
+    <div class="form__col">
+        <div class="form__row"><label>Country <select name="country" id="country">
+            <option value="">USA</option>
+            <option value="">Egypt</option>
+            <option value="">Narnia</option>
+        </select></label></div>
+        <div class="form__twoRow"><label>City <input type="text" name="city" id="city"></label> <label>Postal code
+            <input type="text" name="postalcode" id="postalcode"></label></div>
+        <div class="form__row"><label>Adress <input type="text" name="adress" id="adress"></label></div>
+        <div class="form__row"><input type="checkbox" name="termsservice" id="termsservice">I accept Terms and Service
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12"><h2>Shipping & billing details</h2><h5>You can change the shipping method</h5><br></div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <ul class="list list-package">
+                <li class="item">
+                    <div class="img"><img src="img/car.png" alt=""></div>
+                    <div class="text"><p class="name-package">Standart</p>
+                        <p class="cost-package">5$ in 10 days</p></div>
+                </li>
+                <li class="item active">
+                    <div class="img"><img src="img/aircraft.png" alt=""></div>
+                    <div class="text"><p class="name-package">Standart</p>
+                        <p class="cost-package">5$ in 10 days</p></div>
+                </li>
+                <li class="item">
+                    <div class="img"><img src="img/rocket.png" alt=""></div>
+                    <div class="text"><p class="name-package">Standart</p>
+                        <p class="cost-package">5$ in 10 days</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <ul class="list list-pay">
+                <li class="item">
+                    <div class="col-6">
+                        <div class="payment__method"><p class="">Payment method</p>
+                            <ul class="list">
+                                <li class="col-3">
+                                    <div class="it"><img src="img/masterpass2.png" alt=""></div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="it"><img src="img/masterpass2.png" alt=""></div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="it"><img src="img/masterpass2.png" alt=""></div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="it"><img src="img/masterpass2.png" alt=""></div>
+                                </li>
+                                <li class="col-12">
+                                    <div class="it"><img src="img/paypal.jpg" alt=""></div>
+                                </li>
+                                <li class="col-12">
+                                    <div class="it"><img src="img/amazonpay.png" alt=""></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xs-12">
+                        <div class="card-details"><p class="">Card details</p>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-12"><label for="list-numbers">Card number</label></div>
+                                </div>
+                                <div class="card-num">
+                                    <div class="row">
+                                        <div class="it col-3"><input type="text" name="" id="list-numbers" class=""
+                                                                     onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                                                     maxlength="4"></div>
+                                        <div class="it col-3"><input type="text" name="" id="" class=""
+                                                                     onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                                                     maxlength="4"></div>
+                                        <div class="it col-3"><input type="text" name="" id="" class=""
+                                                                     onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                                                     maxlength="4"></div>
+                                        <div class="it col-3"><input type="text" name="" id="" class=""
+                                                                     onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                                                     maxlength="4"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"><label for="expiration-date">Expiration date</label> <input
+                                            type="date" name="expiration-date" id="expiration-date" class=""></div>
+                                    <div class="col-3 offset-3"><label for="expiration-date">CVC/CVV</label> <input
+                                            type="text" name="cvv" id="cvv" class=""
+                                            onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                            maxlength="3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-9">
+                <button class="btn">submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+<br><br><br><br></body>
+</html>
