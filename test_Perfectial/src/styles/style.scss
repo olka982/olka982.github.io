@@ -1,12 +1,59 @@
+// Use variables for reusable porpetie values
+// Easier to maintain
+// use shorten version for colors
+$grey: #A9A5A9;
+
+
+/* 
+-webkit-
+-moz-
+-ms-
+-o-
+
+https://www.npmjs.com/package/gulp-autoprefixer
+https://github.com/postcss/autoprefixer
+
+ */
+
+
+ /* ============
+DRY, DIE, KISS, SOLID, YAGNI
+Using preprocessor this could be written like this, so we do less code
+
+Use box model reset 
+
+* {
+  &,
+  &:before,
+  &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+Using postprocessor / autoprefixer this could be written like this, so we do less code
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+====== */
+
+/* ============
+See advanced css selectors https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+====== */
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #A9A5A9;
+  color: $grey;
 }
 
 #country {
-  color: #A9A5A9;
+  color: $grey;
 }
 
 .row {
@@ -176,6 +223,9 @@ ul {
     }
   }
 }
+
+// Use code splitting
+// @import './components/_payment-list';
 
 .list-pay {
   /*border: 1px solid lightgray;*/
@@ -380,24 +430,37 @@ ul {
   }
 }
 
+// With preprocessors you can write media queries inside class/id/tag, on place where they are in code
+/* 
+  main {
+    margin: 0 20px;
+    @media (max-width: 600px) {
+      margin: 0 10px;
+    }
+  }
+*/
 @media screen and (max-width: 320px) {
+
   .col-9 {
     width: 112%;
   }
   .col-6 {
     margin: 0 25px 0px 0;
   }
-  .list-pay:before {
-    content: '';
-    position: absolute;
-    top: -3%;
-    left: 145px;
-    z-index: -1;
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    transform: rotate(-45deg);
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  .list-pay{
+    // Use nesting
+    &:before {
+      content: '';
+      position: absolute;
+      top: -3%;
+      left: 145px;
+      z-index: -1;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      transform: rotate(-45deg);
+      box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    }
   }
   .offset-3 {
     margin-left: 28%;

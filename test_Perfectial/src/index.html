@@ -6,8 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/style.css"><!-- Indentation -->
+  <!--
+    Read more about this meta tags and what they solve: 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+  -->
+  <!-- 
+    read:
+    https://realfavicongenerator.net/blog/category/favicon-tips-and-tricks/
+  -->
+  <!-- 
+    read:
+    https://medium.com/@DaphneWatson/css-normalize-css-reset-which-one-do-you-prefer-6e8cc593ac41
+  -->
+  <!-- 
+    review and use as basic
+    https://github.com/h5bp/html5-boilerplate
+  -->
+  <!-- 
+    No webfont loaded "Roboto" used in design
+    https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+  -->
   <title>Document</title>
 </head>
 
@@ -85,7 +107,7 @@
       </div>
     </div>
 
-	<div class="row">
+	<div class="row"> <!-- Indentation -->
 	    <div class="col-12">
 			<h2>Shipping & billing details</h2>
 			<h5>You can change the shipping method</h5>
@@ -177,16 +199,16 @@
 								<div class="card-num">
     								<div class="row">
     									<div class="it col-3">
-											<input type="text" name="" id="list-numbers" class="" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" maxlength="4">
+											<input type="text" name="" id="list-numbers" class="" onkeypress="inputKeyPres()" maxlength="4">
 										</div>
 		    							<div class="it col-3">
-											<input type="text" name="" id="" class="" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" maxlength="4">
+											<input type="text" name="" id="" class="" onkeypress="inputKeyPres()" maxlength="4">
 										</div>
 		    							<div class="it col-3">
-											<input type="text" name="" id="" class="" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" maxlength="4">
+											<input type="text" name="" id="" class="" onkeypress="inputKeyPres()" maxlength="4">
 										</div>
 		    							<div class="it col-3">
-											<input type="text" name="" id="" class="" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" maxlength="4">
+											<input type="text" name="" id="" class="" onkeypress="inputKeyPres()" maxlength="4">
 										</div>
     								</div>
     							</div>
@@ -197,7 +219,7 @@
 									</div>
 									<div class="col-3 offset-3">
 										<label for="expiration-date">CVC/CVV</label>
-										<input type="text" name="cvv" id="cvv" class="" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" maxlength="3">
+										<input type="text" name="cvv" id="cvv" class="" onkeypress="inputKeyPres()" maxlength="3">
 									</div>
 								</div>
 	    					</div>
@@ -217,10 +239,17 @@
 
   </form>
 
+  <br> <!-- What this for ? -->
   <br>
   <br>
   <br>
-  <br>
+  <script>
+    function inputKeyPres() {
+      // Reusable with function
+      // easier to maintain
+      if ( isNaN( String.fromCharCode(event.keyCode) )) return false;
+    }
+  </script>
 </body>
 
 </html>
